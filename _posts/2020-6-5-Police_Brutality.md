@@ -18,4 +18,4 @@ It is not our intent to apply any prejudice to this dataset. Of course, do not w
 WE HAVE no pre-formed expectations, DIDN'T YOU HEAR ME?
 
 ## Source
-[Police Brutality Database]()
+[Police Brutality Database](https://mappingpoliceviolence.org/)
