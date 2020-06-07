@@ -3,7 +3,7 @@ layout: post
 title: Racial Disparity in Police Brutality 2013 to 2020
 ---
 
-In the wake of the murder of George Floyed in the Twin Cities, we thought we could help lend perspective by applying GIS tools to a database of incidents where invidiuals were killed while interacting with a police officer or while in police custody in the United States. The data include the location and time of the incidents as well as myriad details about the victim's race, alledged crime and details about the offending officer.
+In the wake of the murder of George Floyed in the Twin Cities, we thought we could help lend perspective by applying GIS tools to a database of incidents where invidiuals were killed while in police custody in the United States. The data include the location and time of the incidents as well as myriad details about the victim's race, alledged crime and details about the offending officer.
 
 ![BLM Street DC](../images/BLMDC.png)
 
