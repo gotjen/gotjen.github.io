@@ -4,12 +4,8 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+My name is Hank.
+I use this blog to post project and studies that interest me.
+Kacy helps with studies
 
-### More Information
-
-A place to include any other types of information that you'd like to include about yourself.
-
-### Contact me
-
-[email@domain.com](mailto:email@domain.com)
+[Contact me](mailto:hgotjen@gamil.com)
