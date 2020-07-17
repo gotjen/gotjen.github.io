@@ -19,7 +19,7 @@ avatar: https://avatars2.githubusercontent.com/u/372588?s=400&u=8fbff03354ccb231
 footer-links:
   dribbble:
   email: hgotjen@gmail.com
-  facebook:
+  facebook: gotjen
   flickr:
   github: gotjen
   instagram: gotjen
@@ -28,7 +28,7 @@ footer-links:
   rss: lol # just type anything here for a working RSS icon
   twitter: gotjen
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
-  youtube: # channel/<your_long_string> or user/<user-name>
+  youtube: hgotjen # channel/<your_long_string> or user/<user-name>
   googleplus: # anything in your profile username that comes after plus.google.com/
 
 
@@ -48,6 +48,18 @@ url:
 # and NOT your User repository (http://yourusername.github.io)
 # then add in the baseurl here, like this: "/repository-name"
 baseurl: ""
+
+# plugins
+plugins:
+  - jekyll-katex
+
+katex:
+  js_path: "{{ Gem::lib_path }}/assets/js"  # Path used to search for katex.min.js
+  rendering_options:
+    # Default KaTeX rendering options. See https://github.com/Khan/KaTeX#rendering-options
+    throw_error: true                       # throwOnError - set to false if you want rendering to output error as text rather than a build error
+    error_color: "#cc0000"                  # errorColor
+
 
 #
 # !! You don't need to change any of the configuration flags below !!
