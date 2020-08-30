@@ -3,7 +3,7 @@
 #
 
 # Name of your site (displayed in the header)
-name: Hank G
+name: Henry Gotjen
 
 # Short bio or description (displayed in the header)
 description: Just a blog
@@ -50,15 +50,16 @@ url:
 baseurl: ""
 
 # plugins
-plugins:
-  - jekyll-katex
+#plugins:
+#  - jekyll-katex
+#  - jekyll-spaceship
 
-katex:
-  js_path: "{{ Gem::lib_path }}/assets/js"  # Path used to search for katex.min.js
-  rendering_options:
-    # Default KaTeX rendering options. See https://github.com/Khan/KaTeX#rendering-options
-    throw_error: true                       # throwOnError - set to false if you want rendering to output error as text rather than a build error
-    error_color: "#cc0000"                  # errorColor
+#katex:
+#  js_path: "{{ Gem::lib_path }}/assets/js"  # Path used to search for katex.min.js
+#  rendering_options:
+#    # Default KaTeX rendering options. See https://github.com/Khan/KaTeX#rendering-options
+#    throw_error: false                       # throwOnError - set to false if you want rendering to output error as text rather than a build error
+#    error_color: "#cc0000"                  # errorColor
 
 
 #
@@ -72,6 +73,7 @@ version: v1.2.0
 
 # Jekyll 3 now only supports Kramdown for Markdown
 kramdown:
+  math_engine: mathjax
   # Use GitHub flavored markdown, including triple backtick fenced code blocks
   input: GFM
   # Jekyll 3 and GitHub Pages now only support rouge for syntax highlighting
