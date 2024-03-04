@@ -7,19 +7,16 @@ In 2019, I went to Snowshoe, West Virginia with my girlfriend Kacy to meet up wi
 
 We were out driving dirt roads and found a cleared lot in the woods with shipping containers, a lot of trash, and this beautiful hoop ride on a trailer, parked out of sight. It had no locks, no barrier to stop us from trying it, SO WE DID.
 
-[/]: <> (YouTube embedded)
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Dk8QO6jE5dA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+![[circus_screenshot01.png]]
 
-This was a blast; you can't help from laughing volently when you step into it an let go. Its not nearly as nauseating as it looks. Once you get over the fear of chopping your hands off in the whirring hoops. I felt like Jodie Foster in Contact
+This was a blast; you can't help from laughing violently when you step in it and let go. Its not nearly as nauseating as it looks. Once you get over the fear of chopping your hands off in the whirring hoops. I felt like Jodie Foster in Contact
 
-[/]:<> (Contact [1997] image)
-<img src="../images/circus/contact_machine.jpg" width="800px"/>
-
-It immediately tickled my physics brain. I couldn't go to sleep that night, imagining analytical solutions so some nifty differential equations that would describ...
+![[contact_machine.jpg]]
+It immediately tickled my physics brain. I couldn't go to sleep that night, imagining analytical solutions so some nifty differential equations that would describe the motion of a triple pendulum...
 
 *NERD ALERT* if you just came here for sexy, mesmerizing animations [skip ahead](#theJuice)
 
-Okay, so lets break this down. There are three concentric hoops free to rotate on alternating axes (horizontal, vertical, horizontal). If you have ever studied the double pendulum problem, you'll know that this should be very similar to that but with some angular momentum complications. Excitingly, this means the solutions will be [chaotic](https://en.wikipedia.org/wiki/Chaos_theory)! That means everytime you step in, you get a different ride than has ever been experienced.
+Okay, so lets break this down. There are three concentric hoops free to rotate on alternating axes (horizontal, vertical, horizontal). If you have ever studied the double pendulum problem, you'll know that this should be very similar to that but with some angular momentum complications. Excitingly, this means the solutions will be [chaotic](https://en.wikipedia.org/wiki/Chaos_theory)! That means every time you step in, you get a different ride than has ever been experienced.
 
 Its been a while since I brought my physics mechanics-fu to bear :bear: on a real problem. To get back into it, I needed to tract the untractable, cut it into a bunch of pieces.
 
@@ -62,11 +59,11 @@ $$\frac{\partial L}{\partial q} - \frac{\,d}{\,d t} \left( \frac{\partial L}{\pa
 
 For ever system parameter, $$q$$, we have a differential equation. In this case, the whole system is described by the one free parameter $$\phi$$. Notice that derivatives w.r.t. $$q$$ and w.r.t $$\dot q$$ are treated differently, as though they are completely different paramters.
 
-For our simple pendulum the $$\frac{\partial L}{\partial q}$$ partial derivative acts only on the potential energy, V part of the lagrangian, and $$\frac{\partial L}{\partial \dot q}$$ acts only on the kinetic energy, T part, after which we apply a total derivative with respect to time. This simply turns the angluar velocity $$\dot\phit$$ into an angular acceleration $$\ddot\phi$$. We end up with this equation.
+For our simple pendulum the $$\frac{\partial L}{\partial q}$$ partial derivative acts only on the potential energy, V part of the lagrangian, and $$\frac{\partial L}{\partial \dot q}$$ acts only on the kinetic energy, T part, after which we apply a total derivative with respect to time. This simply turns the angluar velocity $\dot\phi$ into an angular acceleration $\ddot\phi$. We end up with this equation.
 
 $$-mgL\sin\phi - mL^2 \ddot\phi = 0$$
 
-Which simplifies to the same equation we got from Newtonian Mechanics!! So we can beconfident that this Lagrangian business works so long as we're meticulous about describing all the kinetic and potential energies in terms of the system variables.
+Which simplifies to the same equation we got from Newtonian Mechanics!! So we can be confident that this Lagrangian business works so long as we're meticulous about describing all the kinetic and potential energies in terms of the system variables.
 
 ## 2) Make that Pendulum into a Hoop
 I am going to move in steps to morph the simple pendulum problem into the full treatment of the triple pendulum circus contraption. Lets start by turning the pendulum into a hoop. This will involve trading the point mass for an extended body: a hoop. While we're at it, we might as well formalize all the constants for the triple hoop case. At first blush, we could say all the hoops have the same radius and the same mass. Animating three hoops of the same size would look dorky if they're passing through each other. Maybe we just fake a larger radius for the outer hoop and a smaller radius for then inner hoop. That would look better, but those hoops are made of the same steel, a larger radius hoop should have a larger mass proportional to $$\frac{r}{r_0}$$. To solve this, I define a linear hoop density $$\lambda_hoop$$, then the mass of each hoop with radius r will be $$M_i = 2\pi R_i \lambda$$. You may think this is unnecessarily complicated, but supposing we want to analyse the characteristic time of the circus system from the video later on - its a correction that will mater.
